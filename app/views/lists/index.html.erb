@@ -1,4 +1,4 @@
-<h1>Listing lists</h1>
+<h1>The lists</h1>
 
 <table>
   <thead>
@@ -12,12 +12,12 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= list.user_id %></td>
+        <td><%= list.user.name %></td>
         <td><%= list.title %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	<td> <%= render 'tasks/form' %></td>
+        <td><%= link_to 'look at tasks', list %></td>
+        <td><%= link_to 'change name', edit_list_path(list) %></td>
+        <td><%= link_to 'Delete list', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>

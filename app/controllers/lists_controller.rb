@@ -10,8 +10,10 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+
 	@list = List.includes([:tasks]).find(params[:id])
 	@task = Task.new
+
   end
 
   # GET /lists/new

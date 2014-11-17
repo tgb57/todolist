@@ -1,5 +1,5 @@
 
-<%= form_for(User.new, method: :post, url: session_path) do |f| %>
+<%= form_for(User.new, method: :post, url: sessions_path) do |f| %>
   <label>
     Email
     <%= f.text_field :email, placeholder: 'Email address' %>
